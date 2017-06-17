@@ -8,7 +8,6 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'yarn clean'
         sh 'yarn install'
         sh 'yarn test -- --coverage'
       }
