@@ -3,7 +3,12 @@ pipeline {
   stages {
     stage('Init') {
       steps {
-        echo 'Init'
+        echo 'Starting build'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'yarn test -- --coverage'
       }
     }
   }
